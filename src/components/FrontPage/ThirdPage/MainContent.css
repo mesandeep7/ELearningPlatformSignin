@@ -1,0 +1,117 @@
+.containerClass {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 100px 50px;
+  padding: 100px 50px;
+}
+
+.containerClass .cardClass {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 350px;
+  max-width: 100%;
+  height: 300px;
+  background: white;
+  border-radius: 20px;
+  transition: 0.5s;
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+}
+
+.containerClass .cardClass:hover {
+  height: 400px;
+  cursor: pointer;
+}
+
+.containerClass .cardClass .img-box {
+  position: absolute;
+  top: 20px;
+  width: 300px;
+  height: 220px;
+  background: #333;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.containerClass .cardClass:hover .img-box {
+  top: -100px;
+  scale: 0.75;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+
+.containerClass .cardClass .img-box img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.containerClass .cardClass .contentClass {
+  position: absolute;
+  top: 252px;
+  width: 100%;
+  height: 35px;
+  padding: 0 30px;
+  text-align: center;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.containerClass .cardClass:hover .contentClass {
+  top: 130px;
+  height: 250px;
+}
+
+.containerClass .cardClass .contentClass h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ad64bb;
+  /* color: var(--clr); */
+}
+
+.containerClass .cardClass .contentClass p {
+  color: #333;
+}
+
+.containerClass .cardClass .contentClass a {
+  position: relative;
+  top: 15px;
+  display: inline-block;
+  padding: 12px 25px;
+  text-decoration: none;
+  background: #ad64bb;
+  /* background: var(--clr); */
+  color: white;
+  font-weight: 500;
+}
+
+.containerClass .cardClass .contentClass a:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 480px) {
+  .containerClass .cardClass {
+    width: 230px;
+    border-radius: 15px;
+  }
+
+  .containerClass .cardClass .img-box {
+    width: 185px;
+    border-radius: 10px;
+  }
+
+  .containerClass .cardClass .contentClass p {
+    font-size: 0.8rem;
+  }
+
+  .containerClass .cardClass .contentClass a {
+    font-size: 0.9rem;
+  }
+}
